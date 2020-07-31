@@ -64,13 +64,22 @@ class MyGamesViewController: UIViewController, UITableViewDataSource, UITableVie
             
        
         cell.Favorite.setImage(UIImage(systemName: favoriteImage), for:  UIControl.State.normal)
-     
+        cell.setupFontsByDevice()
+        
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 175
+        if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad)
+        {
+              return 350
+        }
+        else
+        {
+             return 175
+        }
+        
     }
 
 }

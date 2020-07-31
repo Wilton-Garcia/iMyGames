@@ -37,4 +37,22 @@ class MyGameTableViewCell: UITableViewCell {
     @IBAction func FinishGame(_ sender: Any) {
         GameDataBase.shared.finishGame(index: MyIndex)
     }
+    
+    
+    func setupFontsByDevice(){
+        if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad)
+            {
+                GameName.font = UIFont.systemFont(ofSize: 34)
+                GamePrice.font = UIFont.systemFont(ofSize: 34)
+                GamePlataform.font = UIFont.systemFont(ofSize: 34)
+                
+    
+            }
+            else
+            {
+                 GameName.font = UIFont.systemFont(ofSize: 17)
+                 GamePrice.font = UIFont.systemFont(ofSize: 17)
+                 GamePlataform.font = UIFont.systemFont(ofSize: 17)
+            }
+    }
 }
