@@ -42,7 +42,7 @@ class GamaStatisticViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell", for: indexPath) as! DataTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell2", for: indexPath) as! DataTableViewCell
         
         
         let statistic =   gameData[indexPath.row]
@@ -52,9 +52,13 @@ class GamaStatisticViewController: UIViewController, UITableViewDataSource, UITa
         
         return  cell
     }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.layoutSubviews()
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 75
     }
     
 

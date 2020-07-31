@@ -9,9 +9,6 @@
 import UIKit
 
 class DataTableViewCell: UITableViewCell {
-
     @IBOutlet weak var statistic: UILabel!
     @IBOutlet weak var statisticValue: UILabel!
-    
-
 }
